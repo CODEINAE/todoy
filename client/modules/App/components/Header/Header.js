@@ -42,19 +42,16 @@
 // };
 //
 // export default Header;
-
 import React, { Component } from 'react';
-import { Menu } from 'semantic-ui-react'
-import styles from './Header.css';
+import { Menu } from 'semantic-ui-react';
 
 export default class Header extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      activeItem: 'home'
+      activeItem: 'home',
     };
   }
-
   handleItemClick(e, { name }) {
     this.setState({ activeItem: name });
   }
@@ -62,12 +59,12 @@ export default class Header extends Component {
   render() {
     return (
       <Menu secondary>
-          <Menu.Item name='TODOY' active={this.state.activeItem === 'home'} onClick={this.handleItemClick.bind(this)} />
-          <Menu.Item name='STATISTICS' active={this.state.activeItem === 'messages'} onClick={this.handleItemClick.bind(this)} />
-          <Menu.Menu position='right'>
-            <Menu.Item name='logout' active={this.state.activeItem === 'friends'} onClick={this.handleItemClick.bind(this)} />
-          </Menu.Menu>
-        </Menu>
-    )
+        <Menu.Item name="TODOY" active={this.state.activeItem === 'home'} onClick={this.handleItemClick.bind(this)} />
+        <Menu.Item name="STATISTICS" active={this.state.activeItem === 'messages'} onClick={this.handleItemClick.bind(this)} />
+        <Menu.Menu position="right">
+          <Menu.Item name="logout" active={this.state.activeItem === 'friends'} onClick={this.handleItemClick.bind(this)} />
+        </Menu.Menu>
+      </Menu>
+    );
   }
-};
+}
