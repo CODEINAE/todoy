@@ -55,6 +55,11 @@ module.exports = {
         test: /\.json$/,
         loader: 'json-loader',
       },
+      {
+        test: /\.(eot|png|svg|[ot]tf|woff2?)(\?v=\d+\.\d+\.\d+)?$/,
+        loader: 'url',
+        query: {limit: 10000}
+      }
     ],
   },
 

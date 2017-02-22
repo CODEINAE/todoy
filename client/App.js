@@ -11,6 +11,7 @@ import routes from './routes';
 
 // Base stylesheet
 require('./main.css');
+import 'semantic-ui-css/semantic.css';
 
 export default function App(props) {
   return (
